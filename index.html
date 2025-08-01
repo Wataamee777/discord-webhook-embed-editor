@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Discord Embed Editor</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Discord Embedビジュアルエディタ</h1>
+
+  <form id="embedForm">
+    <label>Webhook URL:<br />
+      <input type="url" id="webhookUrl" placeholder="https://discord.com/api/webhooks/..." required />
+    </label><br />
+
+    <label>タイトル:<br />
+      <input type="text" id="title" placeholder="タイトル" />
+    </label><br />
+
+    <label>説明:<br />
+      <textarea id="description" placeholder="説明"></textarea>
+    </label><br />
+
+    <label>色:<br />
+      <input type="color" id="color" placeholder="例: ff0000 or 16711680" />
+    </label><br />
+
+    <label>アイコン画像URL (footer):<br />
+      <input type="url" id="iconImage" placeholder="https://example.com/icon.png" />
+    </label><br />
+
+    <label>サムネイル画像URL:<br />
+      <input type="url" id="thumbnailImage" placeholder="https://example.com/thumb.png" />
+    </label><br />
+
+    <fieldset id="fieldsContainer">
+      <legend>フィールド (最大5個)</legend>
+      <!-- JSで追加 -->
+    </fieldset>
+    <button type="button" id="addFieldBtn">＋フィールド追加</button><br /><br />
+
+    <button type="submit">Webhookに送信</button>
+  </form>
+
+  <hr />
+
+  <button id="saveLocalBtn">保存</button>
+  <button id="loadLocalBtn">読み込み</button>
+  <button id="genUrlBtn">共有用URL生成</button><br /><br />
+
+  <textarea id="shareUrl" readonly style="width:100%; height: 60px;" placeholder="ここに共有URLが生成されます"></textarea>
+
+  <hr />
+
+  <h2>プレビュー</h2>
+  <pre id="previewArea" style="background:#222; color:#eee; padding:10px; white-space: pre-wrap;"></pre>
+
+<script src="script.js"></script>
+</body>
+</html>
