@@ -1,11 +1,23 @@
+body, body * {
+  font-family: "DotGothic16", sans-serif !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  color: #eee;
+  background-color: #1e1e2f;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   max-width: 700px;
   margin: 20px auto;
   padding: 20px;
   background: #1e1e2f;
   color: #eee;
-  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1 {
@@ -13,11 +25,13 @@ h1 {
   margin-bottom: 24px;
   color: #82aaff;
   text-shadow: 0 0 6px #82aaffaa;
+  font-weight: 700 !important;
+  font-size: 2.5rem;
 }
 
 label {
   display: block;
-  font-weight: 600;
+  font-weight: 600 !important;
   margin-top: 16px;
   margin-bottom: 6px;
   color: #c0c0ff;
@@ -36,7 +50,7 @@ textarea {
   background: #2a2a44;
   color: #ddd;
   box-shadow: inset 0 0 8px #000a;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 input[type="text"]:focus,
@@ -56,13 +70,13 @@ textarea {
 button {
   margin-top: 12px;
   padding: 10px 18px;
-  font-weight: 700;
+  font-weight: 700 !important;
   border: none;
   border-radius: 6px;
   background: #4c7efc;
   color: white;
   cursor: pointer;
-  transition: background-color 0.25s ease;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
   box-shadow: 0 4px 8px #2858e0aa;
 }
 
@@ -81,7 +95,7 @@ fieldset {
 }
 
 legend {
-  font-weight: 700;
+  font-weight: 700 !important;
   padding: 0 8px;
   color: #c0c0ff;
 }
@@ -100,10 +114,11 @@ legend {
   flex-shrink: 0;
   background: #ff5555;
   box-shadow: 0 3px 7px #b22222aa;
-  font-weight: 900;
+  font-weight: 900 !important;
   padding: 0 10px;
   font-size: 16px;
   line-height: 1;
+  color: white;
 }
 
 #fieldsContainer button:hover {
@@ -115,18 +130,19 @@ legend {
   background: #12122c;
   border-radius: 8px;
   padding: 16px;
-  font-family: 'Source Code Pro', monospace;
+  font-family: "DotGothic16", monospace, sans-serif !important;
   font-size: 13px;
   color: #88c0d0;
   overflow-x: auto;
   min-height: 160px;
+  white-space: pre-wrap;
 }
 
 #shareUrl {
   background: #222244;
   border-radius: 8px;
   color: #ccddff;
-  font-family: monospace;
+  font-family: monospace, "DotGothic16", sans-serif !important;
   font-size: 13px;
   padding: 10px;
   resize: none;
@@ -134,6 +150,7 @@ legend {
   box-shadow: inset 0 0 6px #000a;
 }
 
+/* レスポンシブ対応 */
 @media (max-width: 480px) {
   body {
     margin: 10px 12px;
